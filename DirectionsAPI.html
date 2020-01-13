@@ -1,3 +1,4 @@
+<!-- Code Credit: https://developers.google.com/maps/documentation/javascript/directions#DrivingOptions-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -82,12 +83,12 @@
     <div id="map"></div>
 
     <script>
-        
+
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     mapTypeControl: false,
-    center: {lat: -33.8688, lng: 151.2195},
-    zoom: 13
+    center: {lat: 44.502828, lng: -80.217360},
+    zoom: 15
   });
 
   new AutocompleteDirectionsHandler(map);
@@ -100,7 +101,7 @@ function AutocompleteDirectionsHandler(map) {
   this.map = map;
   this.originPlaceId = null;
   this.destinationPlaceId = null;
-  this.travelMode = 'WALKING';
+  this.travelMode = 'DRIVING';
   this.directionsService = new google.maps.DirectionsService;
   this.directionsRenderer = new google.maps.DirectionsRenderer;
   this.directionsRenderer.setMap(map);
