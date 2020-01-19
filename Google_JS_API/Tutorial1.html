@@ -26,13 +26,13 @@
     <script>
 // Initialize and add the map
 function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
+  // The location of 251 Niagara St
+  var niagaraSt = {lat: 43.644405, lng: -79.409039};
+  // The map, centered at 251 Niagar St
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
+      document.getElementById('map'), {zoom: 4, center: niagaraSt});
   // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
+  var marker = new google.maps.Marker({position: niagaraSt, map: map});
 }
     </script>
     <!--Load the API from the specified URL
