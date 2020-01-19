@@ -3,10 +3,16 @@
   <head>
     <style>
        /* Set the size of the div element that contains the map */
-      #map {
+      #map_1 {
         height: 600px;
         width: 100%;
        }
+      
+      #map_2 {
+        height: 600px;
+        width: 100%;
+       }
+
       h1 {
         font-family:verdana;
         text-align:center;
@@ -23,17 +29,17 @@
       <h3>Tutorial #1: Google Map with a Marker</h3>
       <p>Marker Indicating Location of Niagara St. Toronto, ON</p>
     </div>
-    <div id="map"></div>
+    <div id="map_1"></div>
     <script>
 // Initialize and add the map
 function initMap() {
   // The location of 251 Niagara St
   var niagaraSt = {lat: 43.644405, lng: -79.409039};
   // The map, centered at 251 Niagar St
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 12, center: niagaraSt});
+  var map_1 = new google.maps.Map(
+      document.getElementById('map_1'), {zoom: 12, center: niagaraSt});
   // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: niagaraSt, map: map});
+  var marker = new google.maps.Marker({position: niagaraSt, map: map_1});
 }
     </script>
     <!--Load the API from the specified URL
@@ -48,13 +54,12 @@ function initMap() {
     <h3>Tutorial #2: Marker Clustering</h3>
     <p>...</p>
   </div>
-  
-  <div id="map"></div>
+  <div>
+  <div id="map_2"></div>
     <script>
-
       function initMap() {
 
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var map_2 = new google.maps.Map(document.getElementById('map_2'), {
           zoom: 3,
           center: {lat: -28.024, lng: 140.887}
         });
@@ -74,7 +79,7 @@ function initMap() {
         });
 
         // Add a marker clusterer to manage the markers.
-        var markerCluster = new MarkerClusterer(map, markers,
+        var markerCluster = new MarkerClusterer(map_2, markers,
             {imagePath: 'https://dnoakes94.github.io/GEOM99.github.io/Google_JS_API/Tutorial1/markerclusterer/m'});
       }
       var locations = [
@@ -108,5 +113,7 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdCEhX1caZZIz9QAXHAIjoTuSyVX1HELo&callback=initMap">
     </script>
+  </div>
+  </body>
   </body>
 </html>
