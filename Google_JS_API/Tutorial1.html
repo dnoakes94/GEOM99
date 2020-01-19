@@ -21,6 +21,7 @@
     <!--The div element for the map -->
     <div>
       <h3>Tutorial #1: Google Map with a Marker</h3>
+      <p>Marker Indicating Location of Niagara St. Toronto, ON</p>
     </div>
     <div id="map"></div>
     <script>
@@ -30,7 +31,7 @@ function initMap() {
   var niagaraSt = {lat: 43.644405, lng: -79.409039};
   // The map, centered at 251 Niagar St
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: niagaraSt});
+      document.getElementById('map'), {zoom: 12, center: niagaraSt});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: niagaraSt, map: map});
 }
