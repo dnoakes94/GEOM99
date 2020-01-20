@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 600px;
+        width: 100%;
+       }
+      
+      h1 {
+        font-family:verdana;
+        text-align:center;
+      }
+      h3 { 
+        font-family:verdana;
+      }
+    </style>
+  </head>
+  <body>
+    var script = document.createElement('script');
+
+    script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+    document.getElementsByTagName('head')[0].appendChild(script); 
+  </body>
+</html>
